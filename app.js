@@ -17,8 +17,8 @@ const backgroundColorBtn = document.querySelector(".backgroundColorBtn");       
 colorBtn.addEventListener("click", function () {                                      // aggiunge un event listener al click
 
     setTimeout(function () {                                                      // imposta un timeout di 3 secondi
-        backgroundColorBtn.style.backgroundColor = "Red";                              // cambia il colore dello sfondo del body
-    }, 3000); // 3000 millisecondi = 3 secondi
+        backgroundColorBtn.style.backgroundColor = "red";                              // cambia il colore dello sfondo del body
+    }, 3000);                                                                     // 3000 millisecondi = 3 secondi
 
 });
 
