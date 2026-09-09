@@ -47,3 +47,16 @@ function displayTime() {
 const clock = setInterval(displayTime, 1000);
 
 
+function changeColor() {
+    const arrayColors = ["red", "green", "blue", "yellow", "purple", "orange"];
+    const randomColor = Math.floor(Math.random() * arrayColors.length);
+
+    const text = document.querySelector(".title");
+    text.style.color = arrayColors[randomColor];
+
+}
+
+setInterval(changeColor, 500);
+
+
+
