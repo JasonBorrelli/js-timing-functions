@@ -15,10 +15,11 @@ const colorBtn = document.querySelector(".colorBtn");                           
 const backgroundColorBtn = document.querySelector(".backgroundColorBtn");              // seleziona l'elemento backgroundColorBtn
 
 colorBtn.addEventListener("click", function () {                                      // aggiunge un event listener al click
-
+    const arrayColors = ["red", "green", "blue", "yellow", "purple", "orange"];   // array di colori
+    const randomColor = Math.floor(Math.random() * arrayColors.length);           // genera un colore casuale
     setTimeout(function () {                                                      // imposta un timeout di 3 secondi
-        backgroundColorBtn.style.backgroundColor = "red";                              // cambia il colore dello sfondo del body
-    }, 3000);                                                                     // 3000 millisecondi = 3 secondi
+        backgroundColorBtn.style.backgroundColor = arrayColors[randomColor];                              // cambia il colore dello sfondo del body
+    }, 0);                                                                     // 3000 millisecondi = 3 secondi
 
 });
 
