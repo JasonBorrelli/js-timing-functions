@@ -11,13 +11,13 @@
 
 
 
-const colorBtn = document.querySelector(".colorBtn");
-const backgroundColorBtn = document.querySelector(".backgroundColorBtn");
+const colorBtn = document.querySelector(".colorBtn");                                     // seleziona l'elemento colorBtn
+const backgroundColorBtn = document.querySelector(".backgroundColorBtn");              // seleziona l'elemento backgroundColorBtn
 
-colorBtn.addEventListener("click", function () {
+colorBtn.addEventListener("click", function () {                                      // aggiunge un event listener al click
 
-    setTimeout(function () {
-        backgroundColorBtn.style.backgroundColor = "Red";
+    setTimeout(function () {                                                      // imposta un timeout di 3 secondi
+        backgroundColorBtn.style.backgroundColor = "Red";                              // cambia il colore dello sfondo del body
     }, 3000); // 3000 millisecondi = 3 secondi
 
 });
@@ -25,8 +25,8 @@ colorBtn.addEventListener("click", function () {
 
 /* 3.rendi visibile un elemento nascosto dopo alcuni secondi dal caricamento */
 
-setTimeout(function () {
-    colorBtn.style.display = "block";
+setTimeout(function () {                                                      // imposta un timeout di 3 secondi
+    colorBtn.style.display = "block";                                         // mostra l'elemento colorBtn
 }, 3000);
 
 
