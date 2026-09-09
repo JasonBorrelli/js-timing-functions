@@ -32,31 +32,32 @@ setTimeout(function () {
 
 /* 4. mostra l'orario corrente aggiornandolo ogni secondo */
 
-const time = document.querySelector(".timer");
+const time = document.querySelector(".timer");                              // seleziona l'elemento timer
 
 
 function displayTime() {
-    const timerDate = new Date();
-    const hours = timerDate.getHours().toString().padStart(2, '0');
-    const minutes = timerDate.getMinutes().toString().padStart(2, '0');
-    const seconds = timerDate.getSeconds().toString().padStart(2, '0');
-    time.textContent = `${hours}:${minutes}:${seconds}`;
+    const timerDate = new Date();                                             // crea un oggetto data
+    const hours = timerDate.getHours().toString().padStart(2, '0');           // estrae le ore e le formatta
+    const minutes = timerDate.getMinutes().toString().padStart(2, '0');       // estrae i minuti e li formatta
+    const seconds = timerDate.getSeconds().toString().padStart(2, '0');       // estrae i secondi e li formatta
+    time.textContent = `${hours}:${minutes}:${seconds}`;                      // mostra l'orario
 
 }
 
-const clock = setInterval(displayTime, 1000);
+const clock = setInterval(displayTime, 1000);                                 // aggiorna l'orologio ogni secondo
 
+/*fai lampeggiare un titolo alternandone il colore ogni mezzo secondo*/
 
 function changeColor() {
-    const arrayColors = ["red", "green", "blue", "yellow", "purple", "orange"];
-    const randomColor = Math.floor(Math.random() * arrayColors.length);
+    const arrayColors = ["red", "green", "blue", "yellow", "purple", "orange"];   // array di colori
+    const randomColor = Math.floor(Math.random() * arrayColors.length);           // genera un colore casuale
 
-    const text = document.querySelector(".title");
-    text.style.color = arrayColors[randomColor];
+    const text = document.querySelector(".title");                                // seleziona l'elemento title
+    text.style.color = arrayColors[randomColor];                                  // cambia il colore del titolo
 
 }
 
-setInterval(changeColor, 500);
+setInterval(changeColor, 500);                                                    // aggiorna il colore del titolo ogni 500 millisecondi
 
 
 
