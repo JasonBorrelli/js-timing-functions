@@ -3,8 +3,8 @@
 
 
 /* setTimeout(() => {
-    alert("ciao world");
-}, 3000);
+    alert("Buongiorno");
+}, 000);
  */
 
 /* 2.l click su un elemento, cambia il colore dello sfondo del body dopo un ritardo di 3 secondi */
@@ -47,7 +47,7 @@ function displayTime() {
 
 }
 
-const clock = setInterval(displayTime, 1000);                                 // aggiorna l'orologio ogni secondo
+const clock = setInterval(displayTime, 000);                                 // aggiorna l'orologio ogni secondo
 
 /*fai lampeggiare un titolo alternandone il colore ogni mezzo secondo*/
 
