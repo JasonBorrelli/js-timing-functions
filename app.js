@@ -17,9 +17,11 @@ const backgroundColorBtn = document.querySelector(".backgroundColorBtn");       
 colorBtn.addEventListener("click", function () {                                      // aggiunge un event listener al click
     const arrayColors = ["black", "green", "blue", "yellow", "purple", "orange"];   // array di colori
     const randomColor = Math.floor(Math.random() * arrayColors.length);           // genera un colore casuale
+
     setTimeout(function () {                                                      // imposta un timeout di 3 secondi
         document.body.style.backgroundColor = arrayColors[randomColor];                              // cambia il colore dello sfondo del body
     }, 3000);                                                                     // 3000 millisecondi = 3 secondi
+
 
 });
 
@@ -83,10 +85,21 @@ function startLoading(durationMs) {
             clearInterval(timer);
         }
 
+
     }, tickRate);
 }
 
 startLoading(3000); // 5 secondi
+
+
+addEventListener("click", function () {
+    const progressContainer = document.querySelector(".progress-container");
+    progressContainer.style.display = "none";
+
+})
+
+
+
 
 
 
