@@ -28,7 +28,7 @@ colorBtn.addEventListener("click", function () {                                
 
 setTimeout(function () {                                                      // imposta un timeout di 3 secondi
     colorBtn.style.display = "block";                                         // mostra l'elemento colorBtn
-}, 3000);
+}, 3600);
 
 
 /* 4. mostra l'orario corrente aggiornandolo ogni secondo */
@@ -59,6 +59,36 @@ function changeColor() {
 }
 
 setInterval(changeColor, 500);                                                    // aggiorna il colore del titolo ogni 500 millisecondi
+
+
+
+function startLoading(durationMs) {
+    const bar = document.getElementById("progress-bar");
+    const label = document.getElementById("progress-label");
+
+
+    const tickRate = 20;
+    let elapsed = 0;
+
+    const timer = setInterval(() => {
+        elapsed += tickRate;
+
+        const progress = Math.min(elapsed / durationMs, 1);
+        const percentage = Math.round(progress * 100);
+
+        bar.style.width = percentage + "%";
+        label.textContent = percentage + "%";
+
+        if (progress >= 1) {
+            clearInterval(timer);
+        }
+
+    }, tickRate);
+}
+
+startLoading(3000); // 5 secondi
+
+
 
 
 
